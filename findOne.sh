@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # 1. Data API App Id
-appid="<Data API App ID>"
+appid="data-kzdgt"
 
 # 2. API Key
-apikey="<Data API Key>"
+apikey="d2TDY9Chqj8K9gQwjYMLHT9htdMEgVWy42goix687N3Ln76xVLQmK9PV76LlsutJ"
 
 # 3. Base URL
 baseurl="https://data.mongodb-api.com/app/$appid/endpoint/data/v1"
@@ -22,13 +22,13 @@ database="social_butterfly"
 collection="flutters"
 
 # 8. filter
-filter='{}'
-# filter='{
-#   "body": {
-#     "$regex": "dad-a-base", 
-#     "$options": "i"
-#   } 
-# }'
+# filter='{}'
+filter='{
+  "body": {
+    "$regex": "dad-a-base", 
+    "$options": "i"
+  } 
+}'
 
 # 9. Run the curl request from the terminal: ./findOne.sh
 curl -XPOST -H "api-key: $apikey" -H 'Access-Control-Request-Headers: *' -H 'Content-type: application/json' -d '{ 
